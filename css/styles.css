@@ -1,0 +1,189 @@
+/**{
+    margin: 0 auto;
+    padding: 0;
+}
+
+div{
+    background-color: #f00;
+    width: 200px;
+    height: 200px;
+}
+
+div:hover{
+    animation-name: spinner;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.h3{
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    position: relative;
+    top: -100px;
+    animation-name: slide;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+.h4{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    animation-name: slide;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+@keyframes slide{
+    from{
+        font-size: 0;
+        opacity: 0;
+    }
+    to{
+        font-size: 32px;
+        opacity: 1;
+    }
+}
+
+@keyframes spinner{
+    from{
+        border-radius: 0;
+    }
+    to{
+        border-radius: 50%;
+        background-color: #000;
+        transform: rotateZ(360deg);
+    }
+}
+*/
+/*
+img{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: -100px;
+    animation: up 5s infinite;
+}
+
+@keyframes up{
+    0%{
+        transform: translate:(0,0);
+    }
+    25%{
+        font-size: 32px;
+        opacity: 1;
+        display: block;
+        transform: rotateZ(360deg);
+    }
+    50%{
+         transform: translate();
+    }
+    75%{
+        transform: translate(-20px, -800px) scale(0.2);
+    }
+}
+*/
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+div{
+    border: 1px solid #ddd;
+    margin-top: 15%;
+    max-width: 200px;
+    max-height: 200px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: top 1s 1s;
+    
+}
+form{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+form .lembrar{
+    animation:right 2s 1s;
+    
+    display: flex;
+    max-width: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border: none;
+}
+
+form .lembrar label{
+    font: 10px Arial;
+    width: 80%;
+
+}
+
+form input{
+    animation:left 2s 1s;
+    width: 90%;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 1px 1px;
+    border-color: black;
+
+    
+}
+
+form input[type=submit]{
+    animation:campos 2s 1s;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+}
+@keyframes campos{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes left{
+    from{
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes right{
+    from{
+        transform: translateX(200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes top{
+    from{
+        transform: translateY(-400px) scale(0);
+        background-color: black;
+    }
+    to{
+        transform: translateY(0px) scale(1);
+        background-color: rgb(255, 253, 253);
+    }
+}
+/*
+form input[type=reset]{
+    background-color: red;
+}
+*/
